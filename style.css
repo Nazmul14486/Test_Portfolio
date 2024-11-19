@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #080808;
+    color: white;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav img{
+    width: 300px;
+    border-radius: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/* ABOUT */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 600px;
+    border-radius: 20px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    text-align: justify; 
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+
+.active-link::after{
+    width: 50%;
+}
+
+.tab-links:hover{
+    color: white;
+}
+.tab-links:hover::after{
+    width: 100%;
+}
+
+.tab-contain li{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.tab-contain span{
+    color: #ec5987;
+    font-size: 20px;
+}
+
+/* Only the active tab content will be visible */
+.tab-contain {
+    display: none;
+  }
+  
+  .tab-contain.active {
+    display: block;
+  }
+  
+  /* Style for the active tab link */
+  .active-link {
+    color: white /* Example: You can style the active tab link differently */
+  }
+
+  /* Services */
+/* Container and layout styling */
+#portfolio {
+    padding: 50px 0;
+  }
+  
+  .worklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Styling for the images */
+  .work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  /* Hidden layer that will slide in from the bottom */
+  .layer {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #ff004f) ;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: bottom 0.5s ease; /* Transition for smooth sliding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: .5s;
+  }
+  
+  /* Slide the layer up when the work container is hovered */
+  .work:hover .layer {
+    bottom: 0;  /* Move the layer up to cover the image */
+    opacity: 1; /* Make the layer fully visible */
+  }
+
+  .work:hover img{
+    transform: scale(1.2);
+    transition: .5s;
+  }
+
+  .work:hover{
+    transform: translateY(-10px);
+  }
+  
+  /* Styling for the layer content */
+  .layer h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  .layer p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  .layer a {
+    color: #ff004f;
+    background-color: white;
+    font-size: 2em;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .container a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 0px;
+  }
+
+  .btn{
+    font-size: 30px;
+    padding: 20px;
+    background: #ff004f;
+    margin-bottom: 20px;
+  }
+  
